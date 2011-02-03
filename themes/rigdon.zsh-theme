@@ -27,7 +27,7 @@ function prompt_char {
 	echo '»'
 }
 
-PROMPT='%{$fg_no_bold[cyan]%}%n%{$fg_no_bold[magenta]%}➜%{$fg_no_bold[green]%}%3~${vcs_info_msg_0_}%{$reset_color%} $(prompt_char) '
+PROMPT='%{$fg_no_bold[red]%}%n%{$fg_no_bold[magenta]%}➜%{$fg_no_bold[green]%}%3~${vcs_info_msg_0_}%{$reset_color%} $(prompt_char) '
 #PROMPT='%{$fg_no_bold[cyan]%}%n%{$fg_no_bold[magenta]%}➜%{$fg_no_bold[green]%}%3~$(git_prompt_info)%{$reset_color%}» '
 
 # git theming
