@@ -2,9 +2,9 @@ autoload -Uz vcs_info
 
 #zstyle ':vcs_info:*' enable git svn hg
 zstyle ':vcs_info:*' enable git hg
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr "%F{green}●%f"
-zstyle ':vcs_info:*' unstagedstr "%F{yellow}●%f"
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{green}●%f"
+zstyle ':vcs_info:git:*' unstagedstr "%F{yellow}●%f"
 zstyle ':vcs_info:*' nvcsformats "" "%F{cyan}(%b%c%u%f%F{cyan})%f"
 #zstyle ':vcs_info:(sv[nk]):*' branchformat "%b%F{red}:%f%F{yellow}%r%f"
 
