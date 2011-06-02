@@ -4,9 +4,9 @@ autoload -Uz vcs_info
 #zstyle ':vcs_info:*+*' debug true
 zstyle ':vcs_info:*' enable git hg
 zstyle ':vcs_info:*' nvcsformats " »"
-zstyle ':vcs_info:*+set-message:*' hooks setPromptChar
 zstyle ':vcs_info:git*:*' check-for-changes true
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked setPromptChar
+zstyle ':vcs_info:*+set-message:*' hooks setPromptChar
 zstyle ':vcs_info:git*:*' stagedstr "%F{green}●%f"
 zstyle ':vcs_info:git*:*' unstagedstr "%F{yellow}●%f"
 zstyle ':vcs_info:git*:*' formats '%F{cyan}(%b%c%u%f%F{cyan})%f %s'
@@ -32,7 +32,7 @@ function +vi-git-untracked {
 ### Detects the VCS and shows the appropriate sign
 function +vi-setPromptChar {
   [[ ${hook_com[vcs_orig]} == git ]] && hook_com[vcs]=±
-  [[ ${hook_com[vcs_orig]} == 'hg-hgsubversion' ]] && hook_com[vcs]=☿
-  [[ ${hook_com[vcs_orig]} == 'git-svn' ]] && hook_com[vcs]=⚡
+  [[ ${hook_com[vcs_orig]} == hg* ]] && hook_com[vcs]=☿
+  [[ ${hook_com[vcs_orig]} == git-svn ]] && hook_com[vcs]=⚡
 }
 
